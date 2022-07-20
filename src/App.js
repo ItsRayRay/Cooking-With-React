@@ -8,7 +8,7 @@ export const ThemeContext = React.createContext();
 
 function App() {
 
-  const [theme, setTheme] = useState('red');
+  const [theme, setTheme] = useState('green');
 
   return (
   <ThemeContext.Provider value={ { backgroundColor: theme } }>
@@ -16,7 +16,7 @@ function App() {
     <Counter initialCount = {4} />
     counterhooks
     <CounterHooks initialCount = {0} secondaryCount = {2} />
-    <button onClick={() => setTheme(theme === 'red' ? 'blue' : 'red')}>SetColor</button>
+    <button onClick={() => setTheme(theme === 'green' ? 'red' : 'green')}>SetColor</button>
   </ThemeContext.Provider>
   );
 }
